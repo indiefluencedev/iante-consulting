@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Futura PT", 500;
+  }
+}
+
+  p {
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/assets/fonts/futura-pt-book.woff2") format("woff2"),
+    url("/assets/fonts/futura-pt-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/assets/fonts/futura-pt-medium.woff2") format("woff2"),
+    url("/assets/fonts/futura-pt-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/assets/fonts/futura-pt-demi.woff2") format("woff2"),
+    url("/assets/fonts/futura-pt-demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/assets/fonts/futura-pt-bold.woff2") format("woff2"),
+    url("/assets/fonts/futura-pt-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}

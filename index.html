@@ -3,13 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/output.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Consultar Services - Exact UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /*
+        Custom Configuration to match the design's specific colors
+        Light Blue (Accent/Primary): ~#5b7efc
+        Dark Blue (Footer/Button Hover): ~#1a2336
+        Subtle Background: ~#f7f9fc
+        */
+        .bg-consultar-light { background-color: #f7f9fc; }
+        .text-consultar-blue { color: #5b7efc; }
+        .bg-consultar-blue { background-color: #5b7efc; }
+        .bg-consultar-dark { background-color: #1a2336; }
+        .card-shadow { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
+
+        /* Custom style for the light blue background behind the icons */
+        .icon-bg { background-color: rgba(91, 126, 252, 0.1); }
+
+        /* Ensuring the form message box matches the design height/style */
+        textarea.form-textarea {
+            min-height: 140px; /* Visually match the height of the screenshot */
+        }
+    </style>
 </head>
-<body>
-   <h1 class="text-3xl font-bold underline">
-       Hello world!
-     </h1>
+<body class=" bg-[#F4F8FC]">
+
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
+            
+            <p class="text-consultar-blue uppercase tracking-widest text-sm font-medium mb-3">OUR SERVICES</p>
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-16">Explore Our Services</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="p-8 bg-white rounded-xl card-shadow text-left border border-gray-100 hover:border-consultar-blue transition duration-300">
+                    <div class="w-12 h-12 icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-consultar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Strategy and Planning</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        One way to categorize the activities is in terms of the professional's area of expertise such as financial analysis, corporate strategy, tax activities.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-xl card-shadow text-left border border-gray-100 hover:border-consultar-blue transition duration-300">
+                    <div class="w-12 h-12 icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-consultar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2v2m-3 2h6m-5 3v1a3 3 0 003 3h3.5a1.5 1.5 0 000-3H12M9 5a2 2 0 002-2h2a2 2 0 002 2M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Corporate Finance</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        One way to categorize the activities is in terms of the professional's area of expertise such as financial analysis, corporate strategy, tax activities.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-xl card-shadow text-left border border-gray-100 hover:border-consultar-blue transition duration-300">
+                    <div class="w-12 h-12 icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-consultar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Market Research</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        One way to categorize the activities is in terms of the professional's area of expertise such as financial analysis, corporate strategy, tax activities.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-xl card-shadow text-left border border-gray-100 hover:border-consultar-blue transition duration-300">
+                    <div class="w-12 h-12 icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-consultar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.25L17.5 9.75M12 21h8a2 2 0 002-2V7a2 2 0 00-2-2h-4.586a1 1 0 01-.707-.293l-1.414-1.414A1 1 0 0012.293 3H5a2 2 0 00-2 2v14a2 2 0 002 2h4M7 8h10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Business Analysis</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        One way to categorize the activities is in terms of the professional's area of expertise such as financial analysis, corporate strategy, tax activities.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-xl card-shadow text-left border border-gray-100 hover:border-consultar-blue transition duration-300">
+                    <div class="w-12 h-12 icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-consultar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2.15a3 3 0 00-5.356-1.857M12 12a4 4 0 100-8 4 4 0 000 8zm-2 9h4a2 2 0 002-2v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Consumer Markets</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        One way to categorize the activities is in terms of the professional's area of expertise such as financial analysis, corporate strategy, tax activities.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-xl card-shadow text-left border border-gray-100 hover:border-consultar-blue transition duration-300">
+                    <div class="w-12 h-12 icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-consultar-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.104A9.956 9.956 0 0112 21v-2M5.618 4.896A9.956 9.956 0 0012 3v2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Insurance</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        One way to categorize the activities is in terms of the professional's area of expertise such as financial analysis, corporate strategy, tax activities.
+                    </p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- contact us -->
+
+    <section class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
+            
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Have Any Question?</h2>
+            <p class="text-gray-500 text-sm mb-12">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
+
+            <form action="#" method="POST" class="w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <input type="text" placeholder="Your Name*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="email" placeholder="Your Email*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <input type="tel" placeholder="Your Phone*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="text" placeholder="Subject" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                </div>
+                <div class="mb-8">
+                    <textarea placeholder="Your Message" class="form-textarea w-full py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="bg-consultar-blue hover:opacity-90 text-white font-medium py-3 px-10 rounded-lg transition duration-300 shadow-md">
+                    Get In Touch
+                </button>
+            </form>
+        </div>
+    </section>
+
+    ---
+
+    <footer class="bg-consultar-dark py-16 text-gray-300">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-5 h-5 bg-consultar-blue rounded-full"></div>
+                        <span class="text-xl font-semibold text-white">Consultar</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 text-gray-400 pr-12">
+                        Management consulting also is a broad range of activities, and the many firms and practitioners often define these services differently.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.564V12h2.775l-.444 2.891h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.795-1.574 2.164-2.722-.951.564-2.005.974-3.127 1.195-.892-.959-2.175-1.554-3.593-1.554-3.597 0-6.495 2.902-6.495 6.495 0 .507.054 1.006.166 1.488-5.405-.27-10.169-2.846-13.364-6.757-.56.96-.882 2.072-.882 3.242 0 2.253 1.14 4.249 2.87 5.421-.84-.027-1.623-.26-2.313-.64v.08c0 3.149 2.23 5.795 5.2 6.405-.53.14-1.09.22-1.66.22-.407 0-.806-.039-1.196-.112 1.037 3.237 4.02 5.608 7.545 5.608-2.613 2.046-5.908 3.279-9.529 3.279-.62 0-1.229-.036-1.826-.108 3.397 2.179 7.443 3.456 11.77 3.456 14.12 0 21.855-11.71 21.855-21.86 0-.333-.007-.66-.023-.984.151-.117.319-.235.49-.357z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10 10-4.477 10-10zm-2-3.411c0-1.396-1.134-2.53-2.53-2.53H6.53C5.134 6.06 4 7.194 4 8.59v6.82c0 1.396 1.134 2.53 2.53 2.53h10.94c1.396 0 2.53-1.134 2.53-2.53V8.59zM12 9.06a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zm-4.75 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden md:block md:col-span-1"></div>
+
+                <div class="md:col-span-1 text-left md:text-right">
+                    <h4 class="text-xl font-semibold text-white mb-6">CONTACT</h4>
+                    <address class="not-italic text-sm space-y-4 text-gray-400">
+                        <p class="flex items-start md:items-center justify-start md:justify-end">
+                            <svg class="w-4 h-4 mr-3 mt-1 md:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>7 Green Lake Street <br/> Crown Point, IN 47363</span>
+                        </p>
+                        <p class="flex items-center justify-start md:justify-end">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            +1 808 123 465 789
+                        </p>
+                        <p class="flex items-center justify-start md:justify-end">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            consultar@mail.com
+                        </p>
+                    </address>
+                </div>
+
+            </div>
+            <div class="mt-16 pt-6 border-t border-gray-700 text-center">
+                <p class="text-xs text-gray-500">
+                    Copyright © 2025 Consultar by vp-growth. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
