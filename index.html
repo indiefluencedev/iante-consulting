@@ -27,140 +27,147 @@
         }
     </style>
 </head>
-<body class=" bg-[#F4F8FC]">
+<body class=" bg-white">
 
-    <!-- Navbar -->
-    <header class="flex justify-between items-center py-6 px-10  max-w-[1440px] mx-auto">
-      <div class="flex items-center space-x-2">
-        <img src="https://dummyimage.com/40x40/007bff/ffffff&text=C" alt="Logo" class="w-10 h-10">
-        <h1 class="text-xl font-semibold text-blue-800">Consultar</h1>
-      </div>
-      <a href="#contact" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm font-medium rounded-md py-[10px] px-[20px] hover:opacity-90 transition">
-        Get Started
-      </a>
-    </header>
+ <header class="flex justify-between items-center py-6 px-6 lg:px-10 max-w-[1440px] mx-auto">
+  <!-- Logo -->
+  <div class="flex items-center">
+    <img
+      src="../../assets/images/logo.svg"
+      alt="Logo"
+      class="w-[124px] h-[40px] lg:w-[130px] lg:h-[66px] transition-all duration-300"
+    >
+  </div>
 
-    <!-- Hero Section -->
-    <section class="flex flex-col-reverse lg:flex-row items-center justify-between px-10 lg:px-20 py-20 max-w-[1440px] mx-auto">
-
-      <!-- Left Text Content -->
-      <div class="lg:w-1/2 space-y-6">
-        <p class="text-[22px] text-[#8188A9] font-medium">
-          We bring the right people together.
-        </p>
-
-        <h1 class="text-[70px] leading-tight font-extrabold text-gray-900">
-          Helping You Solve <br />
-          Your Problems
-        </h1>
-
-        <p class="text-[25px] text-gray-700 border-l-4 border-gray-400 pl-4">
-          Facilitating client learning — that is, teaching clients how to resolve similar problems in the future.
-        </p>
+  <!-- Button -->
+  <a
+    href="#contact"
+    class="bg-[#163C72] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300"
+  >
+    Get In Touch
+  </a>
+</header>
 
 
-      </div>
+<!-- Hero Section -->
+<section class="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0">
 
-      <!-- Right Image -->
-      <div class="lg:w-1/2 flex justify-center mb-10 lg:mb-0">
-        <div class="relative">
-          <img src="../../assets/herosection.png"
-               alt="Handshake"
-               class="rounded-[30px] w-[624px] h-[550px] shadow-lg" />
-          <div class="absolute bottom-[-20px] left-10 w-[80%] h-[60px] bg-blue-100 rounded-full blur-md opacity-70"></div>
-        </div>
-      </div>
+  <!-- Left Text Content -->
+  <div class="lg:w-1/2 space-y-5  lg:text-left order-1 lg:order-1">
+    <p class="text-[18px] lg:text-[22px] text-[#8188A9] font-medium">
+      We bring the right people together.
+    </p>
 
-    </section>
+    <h1 class="text-[36px] lg:text-[70px] leading-tight font-extrabold text-gray-900">
+      Helping You Solve <br class="hidden lg:block" />
+      Your Problems
+    </h1>
+
+    <p class="text-[18px] lg:text-[25px] text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
+      Facilitating client learning — that is, teaching clients how to resolve similar problems in the future.
+    </p>
+  </div>
+
+  <!-- Right Image -->
+  <div class="lg:w-1/2 flex justify-center mb-10 lg:mb-0 order-2 lg:order-2">
+    <div class="relative">
+      <img src="../../assets/herosection.png"
+           alt="Handshake"
+           class="rounded-[30px] w-[343px] h-[297px] lg:w-[624px] lg:h-[550px] object-cover" />
+      <div class="absolute bottom-[-10px] left-6 lg:left-10 w-[80%] h-[40px] lg:h-[60px] bg-blue-100 rounded-full blur-md opacity-70"></div>
+    </div>
+  </div>
+
+</section>
+
+
      <!-- Hero Services Section -->
-    <section class="py-20 px-6 lg:px-20 max-w-[1440px] mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+   <section class="py-5 px-2 lg:px-20 max-w-[1440px] mx-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
 
-        <!-- Service 1 -->
-        <div class="space-y-4">
-          <div class="flex justify-center">
-            <div class="bg-blue-50 p-6 rounded-2xl">
-              <img src="../../assets/icons/strategy.svg" alt="Strategy" class="w-14 h-14">
-            </div>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900">Strategy and Planning</h3>
-          <p class="text-gray-600 leading-relaxed text-[17px] max-w-md mx-auto">
-            One way to categorize the activities is in terms of the professional’s area of expertise
-            such as competitive analysis, corporate strategy.
-          </p>
+    <!-- Service 1 -->
+    <div class="space-y-4">
+      <div class="flex justify-center">
+        <div class="bg-blue-50 p-6 rounded-2xl">
+          <img src="../../assets/icons/strategy.svg" alt="Strategy" class="w-14 h-14">
         </div>
-
-        <!-- Service 2 -->
-        <div class="space-y-4">
-          <div class="flex justify-center">
-            <div class="bg-blue-50 p-6 rounded-2xl">
-              <img src="../../assets/icons/market.svg" alt="Market Analysis" class="w-14 h-14">
-            </div>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900">Market Analysis</h3>
-          <p class="text-gray-600 leading-relaxed text-[17px] max-w-md mx-auto">
-            One way to categorize the activities is in terms of the professional’s area of expertise
-            such as competitive analysis, corporate strategy.
-          </p>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="space-y-4">
-          <div class="flex justify-center">
-            <div class="bg-blue-50 p-6 rounded-2xl">
-              <img src="../../assets/icons/invesment.svg" alt="Investment Strategy" class="w-14 h-14">
-            </div>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900">Investment Strategy</h3>
-          <p class="text-gray-600 leading-relaxed text-[17px] max-w-md mx-auto">
-            One way to categorize the activities is in terms of the professional’s area of expertise
-            such as competitive analysis, corporate strategy.
-          </p>
-        </div>
-
       </div>
-    </section>
-  <section class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto py-16 px-6 relative">
-
-
-    <!-- Left Image -->
-    <div class="w-full md:w-1/2 relative">
-      <img src="../../assets/Container.png"
-           alt="Consulting professionals"
-           class="rounded-lg  w-full object-cover">
-
-
-    </div>
-
-    <!-- Right Content -->
-    <div class="w-full md:w-1/2 md:pl-12 mt-10 md:mt-0">
-      <!-- Small Icon -->
-      <div class="mb-4">
-        <img src="../../assets/About-icon.png" alt="icon" class="w-10 h-10">
-      </div>
-
-      <!-- Heading -->
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug">
-        Professional And Dedicated <span class="text-blue-600">Consulting</span> Solutions
-      </h2>
-
-      <!-- Paragraph (Exact text from your screenshot) -->
-      <p class="text-gray-600 leading-relaxed mb-6">
-        Management consulting includes a broad range of activities, and the many firms
-        and their members often define these practices quite differently. One way to
-        categorize the activities is in terms of the professional’s area of expertise
-        (such as competitive analysis, corporate strategy, operations management, or human
-        resources). But in practice, as many differences exist within these categories as
-        between them.
+      <h3 class="text-2xl font-bold text-gray-900">Strategy and Planning</h3>
+      <p class="text-gray-600 leading-relaxed text-[17px] max-w-md mx-auto">
+        One way to categorize the activities is in terms of the professional’s area of expertise
+        such as competitive analysis, corporate strategy.
       </p>
-
-      <!-- Signature -->
-      <div>
-        <p class="italic text-gray-800 mb-1">Signature</p>
-        <p class="text-gray-900 font-semibold">Robert William, CEO</p>
-      </div>
     </div>
-  </section>
+
+    <!-- Service 2 -->
+    <div class="space-y-4">
+      <div class="flex justify-center">
+        <div class="bg-blue-50 p-6 rounded-2xl">
+          <img src="../../assets/icons/market.svg" alt="Market Analysis" class="w-14 h-14">
+        </div>
+      </div>
+      <h3 class="text-2xl font-bold text-gray-900">Market Analysis</h3>
+      <p class="text-gray-600 leading-relaxed text-[17px] max-w-md mx-auto">
+        One way to categorize the activities is in terms of the professional’s area of expertise
+        such as competitive analysis, corporate strategy.
+      </p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="space-y-4">
+      <div class="flex justify-center">
+        <div class="bg-blue-50 p-6 rounded-2xl">
+          <img src="../../assets/icons/invesment.svg" alt="Investment Strategy" class="w-14 h-14">
+        </div>
+      </div>
+      <h3 class="text-2xl font-bold text-gray-900">Investment Strategy</h3>
+      <p class="text-gray-600 leading-relaxed text-[17px] max-w-md mx-auto">
+        One way to categorize the activities is in terms of the professional’s area of expertise
+        such as competitive analysis, corporate strategy.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <section class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto py-16 px-6 relative">
+
+  <!-- Left Image -->
+  <div class="w-full relative">
+    <img src="../../assets/Container.png"
+         alt="Consulting professionals"
+         class="rounded-lg w-full object-cover">
+  </div>
+
+  <!-- Right Content -->
+  <div class="w-full mt-10">
+    <!-- Small Icon -->
+    <div class="mb-4">
+      <img src="../../assets/About-icon.png" alt="icon" class="w-10 h-10">
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-gray-900 mb-4 leading-snug">
+      Professional And Dedicated <span class="text-blue-600">Consulting</span> Solutions
+    </h2>
+
+    <!-- Paragraph -->
+    <p class="text-gray-600 leading-relaxed mb-6">
+      Management consulting includes a broad range of activities, and the many firms
+      and their members often define these practices quite differently. One way to
+      categorize the activities is in terms of the professional’s area of expertise
+      (such as competitive analysis, corporate strategy, operations management, or human
+      resources). But in practice, as many differences exist within these categories as
+      between them.
+    </p>
+
+    <!-- Signature -->
+    <div>
+      <p class="italic text-gray-800 mb-1">Signature</p>
+      <p class="text-gray-900 font-semibold">Robert William, CEO</p>
+    </div>
+  </div>
+</section>
 
 <section class="max-w-6xl mx-auto py-16 px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
