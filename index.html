@@ -6,12 +6,6 @@
     <title>Consultar Services - Exact UI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /*
-        Custom Configuration to match the design's specific colors
-        Light Blue (Accent/Primary): ~#5b7efc
-        Dark Blue (Footer/Button Hover): ~#1a2336
-        Subtle Background: ~#f7f9fc
-        */
         .bg-consultar-light { background-color: #f7f9fc; }
         .text-consultar-blue { color: #5b7efc; }
         .bg-consultar-blue { background-color: #5b7efc; }
@@ -30,7 +24,6 @@
 <body class=" bg-white">
 
  <header class="flex justify-between items-center py-6 px-6 lg:px-10 max-w-[1440px] mx-auto">
-  <!-- Logo -->
   <div class="flex items-center">
     <img
       src="../../assets/images/logo.svg"
@@ -39,7 +32,6 @@
     >
   </div>
 
-  <!-- Button -->
   <a
     href="#contact"
     class="bg-[#163C72] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300"
@@ -49,10 +41,8 @@
 </header>
 
 
-<!-- Hero Section -->
 <section class="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0">
 
-  <!-- Left Text Content -->
   <div class="lg:w-1/2 space-y-5  lg:text-left order-1 lg:order-1">
     <p class="text-[18px] md:text-[22px]  text-[#8188A9] font-medium">
       We bring the right people together.
@@ -68,7 +58,6 @@
     </p>
   </div>
 
-  <!-- Right Image -->
   <div class="lg:w-1/2 flex justify-center mb-10 lg:mb-0 order-2 lg:order-2">
     <div class="relative">
       <img src="../../assets/herosection.png"
@@ -81,11 +70,9 @@
 </section>
 
 
-     <!-- Hero Services Section -->
-   <section class="py-5 px-2 lg:px-20 max-w-[1440px] mx-auto">
+     <section class="py-5 px-2 lg:px-20 max-w-[1440px] mx-auto">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
 
-    <!-- Service 1 -->
     <div class="space-y-4">
       <div class="flex justify-center">
         <div class="bg-blue-50 p-6 rounded-2xl">
@@ -99,7 +86,6 @@
       </p>
     </div>
 
-    <!-- Service 2 -->
     <div class="space-y-4">
       <div class="flex justify-center">
         <div class="bg-blue-50 p-6 rounded-2xl">
@@ -113,7 +99,6 @@
       </p>
     </div>
 
-    <!-- Service 3 -->
     <div class="space-y-4">
       <div class="flex justify-center">
         <div class="bg-blue-50 p-6 rounded-2xl">
@@ -161,7 +146,6 @@
       between them.
     </p>
 
-    <!-- Signature -->
     <div>
       <img src="../../assets/icons/signeture.svg" alt="icon" class="w-40 h-20">
       <p class="text-gray-900 font-semibold">Robert William, CEO</p>
@@ -172,7 +156,6 @@
 <section class="max-w-6xl mx-auto py-16 px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-      <!-- Mission Card -->
       <div class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-blue-100">
         <div class="mb-4">
           <img src="../../assets/icons/mission.svg" alt="Mission Icon" class="w-12 h-12">
@@ -186,7 +169,6 @@
         </p>
       </div>
 
-      <!-- Vision Card -->
       <div class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-blue-100">
         <div class="mb-4">
           <img src="../../assets/icons/vision.svg" alt="Vision Icon" class="w-12 h-12 text-[#163C72]">
@@ -288,15 +270,21 @@
             <div class="bg-white p-[50px] shadow-2xl shadow-black-100">
 
             <form id="contact-form" class="w-full">
+            <form id="contact-form" class="w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <input type="text" name="user_name" placeholder="Your Name*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="email" name="user_email" placeholder="Your Email*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                     <input type="text" name="user_name" placeholder="Your Name*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                     <input type="email" name="user_email" placeholder="Your Email*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <input type="tel" name="user_phone" placeholder="Your Phone*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                     <input type="text" name="subject" placeholder="Subject" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="tel" name="user_phone" placeholder="Your Phone*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="text" name="subject" placeholder="Subject" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                 </div>
                 <div class="mb-8">
+                    <textarea name="message" placeholder="Your Message" required class="form-textarea w-full py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm resize-none"></textarea>
                     <textarea name="message" placeholder="Your Message" required class="form-textarea w-full py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm resize-none"></textarea>
                 </div>
 
@@ -306,8 +294,11 @@
             </form>
              <p id="status-message" class="mt-4 font-semibold text-sm"></p>
             </div>
+             <p id="status-message" class="mt-4 font-semibold text-sm"></p>
+            </div>
         </div>
     </section>
+<footer class="bg-gray-800 text-white py-10 px-6 sm:px-12 md:px-20 lg:px-24">
 <footer class="bg-gray-800 text-white py-10 px-6 sm:px-12 md:px-20 lg:px-24">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
 
@@ -444,17 +435,3 @@ scrollToTopBtn.classList.add('hidden');
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
