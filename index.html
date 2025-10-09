@@ -23,7 +23,8 @@
 </head>
 <body class=" bg-white">
 
- <header class="flex justify-between items-center py-6 px-6 lg:px-10 max-w-[1440px] mx-auto">
+<!-- Header -->
+<header class="flex justify-between items-center py-6 px-6 lg:px-10 max-w-[1440px] mx-auto">
   <div class="flex items-center">
     <img
       src="../../assets/images/logo.svg"
@@ -34,6 +35,7 @@
 
   <a
     href="#contact"
+    id="getInTouchBtn"
     class="bg-[#163C72] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300"
   >
     Get In Touch
@@ -42,31 +44,34 @@
 
 
 
-<section class="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0">
+<section class="flex flex-col lg:flex-row items-center justify-between px-6  py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0">
 
   <div class="lg:w-1/2 space-y-5  lg:text-left order-1 lg:order-1">
     <p class="text-[18px] md:text-[22px]  text-[#8188A9] font-medium">
      Empowering Africa's Future
     </p>
 
-    <h1 class="text-[36px] md:text-[70px] lg:text-[40px] xl:text-[70px] leading-tight font-bold text-gray-900">
+    <h1 class="text-[36px] md:text-[64px] lg:text-[40px] xl:text-[64px] leading-tight font-bold text-gray-900">
       Bridging the Gap:  <br class="hidden lg:block" />
       Finance, Energy, and Food Security in Africa
     </h1>
 
-    <p class="text-[18px] md:text-[25px] text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
+    <p class="text-[18px] md:text-[25px] lg:text-[20px] xl:text-[25px] text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
      We are a black female-owned strategic advisory and investment facilitation firm, connecting global capital with transformative, high-impact opportunities across Africa's vital sectors.
     </p>
   </div>
 
   <div class="lg:w-1/2 flex justify-center mb-10 lg:mb-0 order-2 lg:order-2">
-    <div class="relative">
-      <img src="../../assets/herosection.png"
-           alt="Handshake"
-           class="rounded-[30px] w-[343px] h-[297px] md:w-[668px] md:h-[580px] lg:w-[750px] lg:h-[550px] object-cover object-center" />
-      <div class="absolute bottom-[-10px] left-6 lg:left-10 w-[80%] h-[40px] lg:h-[60px] bg-blue-100 rounded-full blur-md opacity-70"></div>
-    </div>
+  <div class="relative">
+    <img
+      src="../../assets/herosection.png"
+      alt="Handshake"
+      class="rounded-[30px] max-w-full h-auto object-cover object-center"
+    />
+    <!-- <div class="absolute bottom-[-10px] left-6 lg:left-10 w-[80%] h-[40px] lg:h-[60px] bg-blue-100 rounded-full blur-md opacity-70"></div> -->
   </div>
+</div>
+
 
 </section>
 
@@ -343,6 +348,30 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
     </svg>
 </button>
+<script>
+  document.getElementById('getInTouchBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector('#contact');
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // duration in ms (1s smooth scroll)
+    let start = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      const easing = progress / duration;
+      const easedProgress = 0.5 * (1 - Math.cos(Math.PI * Math.min(easing, 1))); // smooth easing
+      window.scrollTo(0, startPosition + distance * easedProgress);
+      if (progress < duration) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  });
+</script>
+
+
 
 <script>
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
