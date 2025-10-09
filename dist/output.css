@@ -23,6 +23,7 @@
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
@@ -595,6 +596,9 @@
   }
   .bg-\[\#163C72\] {
     background-color: #163C72;
+  }
+  .bg-\[\#F4F6FA\] {
+    background-color: #F4F6FA;
   }
   .bg-\[\#F4F8FC\] {
     background-color: #F4F8FC;
