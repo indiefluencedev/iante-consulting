@@ -1378,6 +1378,21 @@
       font-size: 70px;
     }
   }
+  .lg\:text-\[36\] {
+    @media (width >= 64rem) {
+      color: 36;
+    }
+  }
+  .xl\:text-\[70px\] {
+    @media (width >= 80rem) {
+      font-size: 70px;
+    }
+  }
+  .\32 xl\:text-\[70px\] {
+    @media (width >= 96rem) {
+      font-size: 70px;
+    }
+  }
 }
 @layer base {
   html {
