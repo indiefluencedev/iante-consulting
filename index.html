@@ -44,16 +44,16 @@
 <section class="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0">
 
   <div class="lg:w-1/2 space-y-5  lg:text-left order-1 lg:order-1">
-    <p class="text-[18px] lg:text-[22px] text-[#8188A9] font-medium">
+    <p class="text-[18px] md:text-[22px]  text-[#8188A9] font-medium">
       We bring the right people together.
     </p>
 
-    <h1 class="text-[36px] lg:text-[70px] leading-tight font-extrabold text-gray-900">
+    <h1 class="text-[36px] md:text-[70px] leading-tight font-extrabold text-gray-900">
       Helping You Solve <br class="hidden lg:block" />
       Your Problems
     </h1>
 
-    <p class="text-[18px] lg:text-[25px] text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
+    <p class="text-[18px] md:text-[25px] text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
       Facilitating client learning — that is, teaching clients how to resolve similar problems in the future.
     </p>
   </div>
@@ -62,7 +62,7 @@
     <div class="relative">
       <img src="../../assets/herosection.png"
            alt="Handshake"
-           class="rounded-[30px] w-[343px] h-[297px] lg:w-[624px] lg:h-[550px] object-cover" />
+           class="rounded-[30px] w-[343px] h-[297px] md:w-[668px] md:h-[580px] lg:w-[750px] lg:h-[550px] object-cover object-center" />
       <div class="absolute bottom-[-10px] left-6 lg:left-10 w-[80%] h-[40px] lg:h-[60px] bg-blue-100 rounded-full blur-md opacity-70"></div>
     </div>
   </div>
@@ -117,22 +117,27 @@
 
   <section class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto py-16 px-6 relative">
 
-  <div class="w-full relative">
+  <!-- Left Image -->
+  <div class="w-full lg:w-1/2 relative">
     <img src="../../assets/Container.png"
          alt="Consulting professionals"
          class="rounded-lg w-full object-cover">
   </div>
 
-  <div class="w-full mt-10">
+  <!-- Right Content -->
+  <div class="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-10">
+    <!-- Small Icon -->
     <div class="mb-4">
       <img src="../../assets/About-icon.png" alt="icon" class="w-10 h-10">
     </div>
 
-    <h2 class="text-3xl font-bold text-gray-900 mb-4 leading-snug">
-      Professional And Dedicated <span class="text-blue-600">Consulting</span> Solutions
+    <!-- Heading -->
+    <h2 class="text-[30px] lg:text-[38px] font-bold text-gray-900 mb-4 leading-snug">
+      Professional And Dedicated <span class="text-[#163C72]">Consulting</span> Solutions
     </h2>
 
-    <p class="text-gray-600 leading-relaxed mb-6">
+    <!-- Paragraph -->
+    <p class="text-[16px] text-gray-600 leading-relaxed mb-6">
       Management consulting includes a broad range of activities, and the many firms
       and their members often define these practices quite differently. One way to
       categorize the activities is in terms of the professional’s area of expertise
@@ -142,7 +147,7 @@
     </p>
 
     <div>
-      <p class="italic text-gray-800 mb-1">Signature</p>
+      <img src="../../assets/icons/signeture.svg" alt="icon" class="w-40 h-20">
       <p class="text-gray-900 font-semibold">Robert William, CEO</p>
     </div>
   </div>
@@ -166,7 +171,7 @@
 
       <div class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-blue-100">
         <div class="mb-4">
-          <img src="../../assets/icons/vision.svg" alt="Vision Icon" class="w-12 h-12 text-blue-700">
+          <img src="../../assets/icons/vision.svg" alt="Vision Icon" class="w-12 h-12 text-[#163C72]">
         </div>
         <h3 class="text-2xl font-semibold text-gray-900 mb-3">Vision</h3>
         <p class="text-gray-600 leading-relaxed">
@@ -181,6 +186,7 @@
   </section>
 
 <!-- OUR SERVICES -->
+
 
     <section class="py-24 bg-[#F4F8FC]">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center ">
@@ -265,15 +271,21 @@
             <div class="bg-white p-[50px] shadow-2xl shadow-black-100">
 
             <form id="contact-form" class="w-full">
+            <form id="contact-form" class="w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <input type="text" name="user_name" placeholder="Your Name*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="email" name="user_email" placeholder="Your Email*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                     <input type="text" name="user_name" placeholder="Your Name*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                     <input type="email" name="user_email" placeholder="Your Email*" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <input type="tel" name="user_phone" placeholder="Your Phone*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                     <input type="text" name="subject" placeholder="Subject" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="tel" name="user_phone" placeholder="Your Phone*" class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
+                    <input type="text" name="subject" placeholder="Subject" required class="py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm" />
                 </div>
                 <div class="mb-8">
+                    <textarea name="message" placeholder="Your Message" required class="form-textarea w-full py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm resize-none"></textarea>
                     <textarea name="message" placeholder="Your Message" required class="form-textarea w-full py-4 px-5 border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-consultar-blue placeholder-gray-400 text-sm resize-none"></textarea>
                 </div>
 
@@ -283,8 +295,11 @@
             </form>
              <p id="status-message" class="mt-4 font-semibold text-sm"></p>
             </div>
+             <p id="status-message" class="mt-4 font-semibold text-sm"></p>
+            </div>
         </div>
     </section>
+<footer class="bg-gray-800 text-white py-10 px-6 sm:px-12 md:px-20 lg:px-24">
 <footer class="bg-gray-800 text-white py-10 px-6 sm:px-12 md:px-20 lg:px-24">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
 
@@ -342,14 +357,53 @@
             </p>
         </div>
     </footer>
+    <!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="fixed right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#163C72] text-white rounded-full flex items-center justify-center shadow-lg  transition duration-300 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 rotate-[-90deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+    </svg>
+</button>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Show/hide button on scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.remove('hidden');
+    } else {
+        scrollToTopBtn.classList.add('hidden');
+    }
+});
+
+// Smooth scroll with requestAnimationFrame for better easing
+scrollToTopBtn.addEventListener('click', () => {
+    const scrollDuration = 600; // duration in ms
+    const start = window.scrollY;
+    let startTime = null;
+
+    function animateScroll(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / scrollDuration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3); // cubic easing out
+        window.scrollTo(0, start * (1 - ease));
+        if (progress < 1) requestAnimationFrame(animateScroll);
+    }
+
+    requestAnimationFrame(animateScroll);
+});
+
+// Initially hide the button
+scrollToTopBtn.classList.add('hidden');
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         // 1. Initialize EmailJS with your Public Key immediately after SDK load
         (function() {
             emailjs.init({
-                publicKey: "mDVJMMOkpD32dFXnx", 
+                publicKey: "mDVJMMOkpD32dFXnx",
             });
         })();
 
@@ -364,9 +418,9 @@
                 // Show sending status
                 statusMessage.className = 'mt-4 font-semibold text-sm text-gray-500';
                 statusMessage.textContent = 'Sending message...';
-                
+
                 // Send the form data
-                emailjs.sendForm('service_fr70vu6', 'template_0eqz8fj', this) 
+                emailjs.sendForm('service_fr70vu6', 'template_0eqz8fj', this)
                     .then(function() {
                         statusMessage.className = 'mt-4 font-semibold text-sm text-green-600';
                         statusMessage.textContent = 'Message sent successfully! We will be in touch soon.';
