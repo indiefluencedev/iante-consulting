@@ -824,6 +824,9 @@
   .text-\[18px\] {
     font-size: 18px;
   }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
   .text-\[22px\] {
     font-size: 22px;
   }
@@ -1228,6 +1231,11 @@
       font-size: 7px;
     }
   }
+  .md\:text-\[20px\] {
+    @media (width >= 48rem) {
+      font-size: 20px;
+    }
+  }
   .md\:text-\[22px\] {
     @media (width >= 48rem) {
       font-size: 22px;
@@ -1498,6 +1506,11 @@
       text-align: left;
     }
   }
+  .lg\:text-\[16px\] {
+    @media (width >= 64rem) {
+      font-size: 16px;
+    }
+  }
   .lg\:text-\[20px\] {
     @media (width >= 64rem) {
       font-size: 20px;
@@ -1551,6 +1564,16 @@
   .xl\:px-20 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .xl\:text-\[16px\] {
+    @media (width >= 80rem) {
+      font-size: 16px;
+    }
+  }
+  .xl\:text-\[20px\] {
+    @media (width >= 80rem) {
+      font-size: 20px;
     }
   }
   .xl\:text-\[25px\] {
