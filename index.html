@@ -372,31 +372,34 @@
     </svg>
 </button>
 <script>
-  document.getElementById('getInTouchBtn').addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector('#contact');
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-    const startPosition = window.scrollY;
-    const distance = targetPosition - startPosition;
-    const duration = 1000; // duration in ms (1s smooth scroll)
-    let start = null;
+// ✅ Reusable smooth scroll with constant speed
+function smoothScrollTo(targetY, speed = 1200) {
+  const start = window.scrollY;
+  const distance = targetY - start;
+  const duration = Math.abs(distance) / speed * 1000; // time in ms
+  let startTime = null;
 
-    function step(timestamp) {
-      if (!start) start = timestamp;
-      const progress = timestamp - start;
-      const easing = progress / duration;
-      const easedProgress = 0.5 * (1 - Math.cos(Math.PI * Math.min(easing, 1))); // smooth easing
-      window.scrollTo(0, startPosition + distance * easedProgress);
-      if (progress < duration) requestAnimationFrame(step);
-    }
+  function animateScroll(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    window.scrollTo(0, start + distance * progress); // linear motion
+    if (progress < 1) requestAnimationFrame(animateScroll);
+  }
 
-    requestAnimationFrame(step);
-  });
-</script>
+  requestAnimationFrame(animateScroll);
+}
 
+// ✅ Get In Touch button scroll (with header offset)
+document.getElementById('getInTouchBtn').addEventListener('click', function (e) {
+  e.preventDefault();
+  const target = document.querySelector('#contact');
+  const headerOffset = 80; // Adjust this value to match your sticky navbar height
+  const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  smoothScrollTo(targetPosition);
+});
 
-
-<script>
+// ✅ Scroll to Top button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 // Show/hide button on scroll
@@ -408,85 +411,56 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Smooth scroll with uniform speed (same feel for any distance)
+// Click to scroll up
 scrollToTopBtn.addEventListener('click', () => {
-  const start = window.scrollY;
-  const target = 0;
-  const distance = target - start;
-  const speed = 1200; // pixels per second (adjust for faster/slower)
-  const duration = Math.abs(distance) / speed * 1000; // time in ms
-  let startTime = null;
-
-  function animateScroll(currentTime) {
-    if (!startTime) startTime = currentTime;
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3); // cubic ease-out
-    window.scrollTo(0, start + distance * ease);
-
-    if (progress < 1) {
-      requestAnimationFrame(animateScroll);
-    }
-  }
-
-  requestAnimationFrame(animateScroll);
+  smoothScrollTo(0); // Scroll back to top at same speed
 });
 
 // Initially hide the button
 scrollToTopBtn.classList.add('hidden');
-</script>
-<script>
-  document.querySelectorAll('header nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      const offset = 80; // adjust for your sticky header height
-      const topPosition = target.offsetTop - offset;
 
-      window.scrollTo({
-        top: topPosition,
-        behavior: 'smooth'
-      });
-    });
+// ✅ Navbar links scroll smoothly (with same offset)
+document.querySelectorAll('header nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const headerOffset = 80; // Adjust for sticky header
+    const targetY = target.offsetTop - headerOffset;
+    smoothScrollTo(targetY);
   });
+});
 </script>
 
+<!-- ✅ EmailJS setup (unchanged) -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        // 1. Initialize EmailJS with your Public Key immediately after SDK load
-        (function() {
-            emailjs.init({
-                publicKey: "mDVJMMOkpD32dFXnx",
-            });
-        })();
+<script type="text/javascript">
+  (function() {
+    emailjs.init({ publicKey: "mDVJMMOkpD32dFXnx" });
+  })();
 
-        // 2. Handle Form Submission after the window and form are loaded
-        window.onload = function() {
-            const form = document.getElementById('contact-form');
-            const statusMessage = document.getElementById('status-message');
+  window.onload = function() {
+    const form = document.getElementById('contact-form');
+    const statusMessage = document.getElementById('status-message');
 
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Stop the default form submit action
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
 
-                // Show sending status
-                statusMessage.className = 'mt-4 font-semibold text-sm text-gray-500';
-                statusMessage.textContent = 'Sending message...';
+      statusMessage.className = 'mt-4 font-semibold text-sm text-gray-500';
+      statusMessage.textContent = 'Sending message...';
 
-                // Send the form data
-                emailjs.sendForm('service_fr70vu6', 'template_0eqz8fj', this)
-                    .then(function() {
-                        statusMessage.className = 'mt-4 font-semibold text-sm text-green-600';
-                        statusMessage.textContent = 'Message sent successfully! We will be in touch soon.';
-                        form.reset(); // Clear the form fields on success
-                    }, function(error) {
-                        statusMessage.className = 'mt-4 font-semibold text-sm text-red-600';
-                        statusMessage.textContent = 'FAILED to send message. Please check your console.';
-                        console.error('EmailJS Error:', error);
-                    });
-            });
-        }
-    </script>
+      emailjs.sendForm('service_fr70vu6', 'template_0eqz8fj', this)
+        .then(function() {
+          statusMessage.className = 'mt-4 font-semibold text-sm text-green-600';
+          statusMessage.textContent = 'Message sent successfully! We will be in touch soon.';
+          form.reset();
+        }, function(error) {
+          statusMessage.className = 'mt-4 font-semibold text-sm text-red-600';
+          statusMessage.textContent = 'FAILED to send message. Please check your console.';
+          console.error('EmailJS Error:', error);
+        });
+    });
+  }
+</script>
 
 </body>
 </html>
