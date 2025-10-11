@@ -23,40 +23,52 @@
 </head>
 <body class=" bg-white">
 
-<!-- Header -->
-<header class="flex justify-between items-center py-6 px-6 lg:px-10 max-w-[1440px] mx-auto">
-  <div class="flex items-center">
-    <img
-      src="../../assets/images/logo.svg"
-      alt="Logo"
-      class="w-[124px] h-[40px] lg:w-[130px] lg:h-[66px] transition-all duration-300"
+<!-- HEADER -->
+  <header class="flex justify-around items-center py-6 px-6 lg:px-10 bg-white mx-auto sticky top-0  z-50">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img
+        src="../../assets/images/logo.svg"
+        alt="Logo"
+        class="w-[124px] h-[40px] lg:w-[130px] lg:h-[66px] transition-all duration-300"
+      >
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex space-x-8 text-[16px] font-medium text-[#163C72]">
+      <a href="#home" class="hover:text-[#0F254A] transition-colors duration-300">Home</a>
+      <a href="#about" class="hover:text-[#0F254A] transition-colors duration-300">About</a>
+      <a href="#services" class="hover:text-[#0F254A] transition-colors duration-300">Services</a>
+      <a href="#contact" class="hover:text-[#0F254A] transition-colors duration-300">Contact</a>
+    </nav>
+
+    <!-- Get In Touch Button -->
+    <a
+      href="#contact"
+      id="getInTouchBtn"
+      class="bg-[#163C72] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300"
     >
-  </div>
-
-  <a
-    href="#contact"
-    id="getInTouchBtn"
-    class="bg-[#163C72] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300"
-  >
-    Get In Touch
-  </a>
-</header>
+      Get In Touch
+    </a>
+  </header>
 
 
 
-<section class="flex flex-col lg:flex-row items-center justify-between px-6  py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0">
+
+<section class="flex flex-col lg:flex-row items-center justify-between px-6  py-16 max-w-[1440px] mx-auto gap-[20px] lg:gap-0" id="home">
 
   <div class="lg:w-1/2 space-y-5  lg:text-left order-1 lg:order-1">
     <p class="text-[18px] xl:text-[20px] lg:text-[16px]  text-[#8188A9] font-medium">
      Empowering Africa's Future
     </p>
 
-    <h1 class="text-[36px] md:text-[64px] lg:text-[40px] xl:text-[64px] leading-tight font-bold text-gray-900">
-      Bridging the Gap:  <br class="hidden lg:block" />
-      Finance, Energy, and Food Security in Africa
+    <h1 class="text-[36px] md:text-[42px] lg:text-[40px] xl:text-[56px] leading-tight font-bold text-gray-900">
+     Connecting investors to sustainable, high-impact deals across Africa’s energy & food sectors <br class="hidden lg:block" />
+
+
     </h1>
 
-    <p class="text-[18px] md:text-[25px] xl:text-[20px] lg:text-[16px]  text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
+    <p class="text-[18px] md:text-[20px] xl:text-[20px] lg:text-[16px]  text-gray-700 border-l-4 border-gray-400 pl-4 mx-auto lg:mx-0">
      We are a black female-owned strategic advisory and investment facilitation firm, connecting global capital with transformative, high-impact opportunities across Africa's vital sectors.
     </p>
   </div>
@@ -76,7 +88,7 @@
 </section>
 
 
-     <section class="py-3 px-2 lg:px-20 max-w-[1440px] mx-auto">
+     <section class="py-3 px-2 lg:px-20 max-w-[1440px] mx-auto" ">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
 
     <div class="space-y-4">
@@ -118,7 +130,7 @@
   </div>
 </section>
 
-  <section class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto py-16 px-6 relative">
+  <section class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto py-16 px-6 relative" id="about">
 
   <!-- Left Image -->
   <div class="w-full lg:w-1/2 relative">
@@ -179,7 +191,7 @@
 
 
 
-    <section class="py-20 bg-[#F4F8FC]">
+    <section class="py-20 bg-[#F4F8FC]" id="services">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center ">
 
             <p class="text-consultar-blue uppercase tracking-widest text-sm font-bold mb-3">OUR SERVICES</p>
@@ -297,7 +309,7 @@
                     We connect investors, innovators, and policymakers to drive Africa’s growth through strategic advisory, project financing, and sustainable investment facilitation.
                 </p>
 
-                <div class="flex space-x-4 pt-2">
+                <!-- <div class="flex space-x-4 pt-2">
                     <a href="#" class="text-gray-400 hover:text-black transition-colors duration-200 p-2 border border-gray-700 hover:border-black rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> </a>
                     <a href="#" class="text-gray-400 hover:text-black transition-colors duration-200 p-2 border border-gray-700 hover:border-black rounded-full">
@@ -307,7 +319,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
 
-                </div>
+                </div> -->
             </div>
 
             <div class="w-full md:w-1/6 md:ml-5xl space-y-4">
