@@ -401,29 +401,35 @@ const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 // Show/hide button on scroll
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.classList.remove('hidden');
-    } else {
-        scrollToTopBtn.classList.add('hidden');
-    }
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.remove('hidden');
+  } else {
+    scrollToTopBtn.classList.add('hidden');
+  }
 });
 
-// Smooth scroll with requestAnimationFrame for better easing
+// Smooth scroll with uniform speed (same feel for any distance)
 scrollToTopBtn.addEventListener('click', () => {
-    const scrollDuration = 600; // duration in ms
-    const start = window.scrollY;
-    let startTime = null;
+  const start = window.scrollY;
+  const target = 0;
+  const distance = target - start;
+  const speed = 1200; // pixels per second (adjust for faster/slower)
+  const duration = Math.abs(distance) / speed * 1000; // time in ms
+  let startTime = null;
 
-    function animateScroll(currentTime) {
-        if (!startTime) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / scrollDuration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3); // cubic easing out
-        window.scrollTo(0, start * (1 - ease));
-        if (progress < 1) requestAnimationFrame(animateScroll);
+  function animateScroll(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+    window.scrollTo(0, start + distance * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
     }
+  }
 
-    requestAnimationFrame(animateScroll);
+  requestAnimationFrame(animateScroll);
 });
 
 // Initially hide the button
