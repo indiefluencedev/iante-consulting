@@ -506,6 +506,12 @@
   .bg-\[\#163C72\] {
     background-color: #163C72;
   }
+  .bg-\[\#224D99\] {
+    background-color: #224D99;
+  }
+  .bg-\[\#224D99c\] {
+    background-color: #224D99c;
+  }
   .bg-\[\#F4F6FA\] {
     background-color: #F4F6FA;
   }
@@ -662,6 +668,9 @@
   .text-\[\#163C72\] {
     color: #163C72;
   }
+  .text-\[\#224D99\] {
+    color: #224D99;
+  }
   .text-\[\#8188A9\] {
     color: #8188A9;
   }
@@ -759,6 +768,13 @@
     &:hover {
       @media (hover: hover) {
         color: #0F254A;
+      }
+    }
+  }
+  .hover\:text-\[\#224D99\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #224D99;
       }
     }
   }
