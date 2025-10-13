@@ -19,9 +19,10 @@
         textarea.form-textarea {
             min-height: 140px; /* Visually match the height of the screenshot */
         }
-          html {
-      scroll-behavior: smooth; /* enables smooth scrolling */
-    }
+         html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
 
     /* Optional: prevent section titles from hiding under sticky header */
     section {
@@ -50,13 +51,13 @@
       <a href="#home" class="hover:text-[#224D99] transition-colors duration-300">Home</a>
       <a href="#about" class="hover:text-[#224D99] transition-colors duration-300">About</a>
       <a href="#services" class="hover:text-[#224D99] transition-colors duration-300">Services</a>
-      <a href="#contact" class="hover:text-[#224D99] transition-colors duration-300">Contact</a>
+     
     </nav>
 
     <!-- Get In Touch Button -->
     <a
       href="#contact"
-      id="getInTouchBtn"
+      id="getInTouchBtn "
       class="bg-[#224D99] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300"
     >
       Get In Touch
@@ -353,7 +354,7 @@
 
                     <div class="flex items-center space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
-                        <a href="mailto:info@ianteconsulting.com" class="text-sm hover:text-[#777777] transition-colors duration-200">info@ianteconsulting.com</a>
+                        <a href="info@iante.co.za" class="text-sm hover:text-[#777777] transition-colors duration-200">info@ianteconsulting.com</a>
                     </div>
                 </div>
             </div>
@@ -366,97 +367,42 @@
         </div>
     </footer>
     <!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" class="fixed right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#224D99] text-white rounded-full flex items-center justify-center shadow-lg  transition duration-300 z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 rotate-[-90deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
-    </svg>
-</button>
+<!-- Down-to-Up Button -->
+<a href="#top" id="home" class="fixed right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#224D99] text-white rounded-full flex items-center justify-center shadow-lg transition duration-300 z-50">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 rotate-[-90deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+  </svg>
+</a>
+
+<!-- Get In Touch Button -->
+<a href="#contact" class="bg-[#224D99] text-white text-sm font-medium rounded-md py-[12px] px-[25px] md:py-[15px] md:px-[45px] hover:opacity-90 transition-all duration-300">
+  Get In Touch
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-// ✅ Reusable smooth scroll with constant speed
-function smoothScrollTo(targetY, speed = 1200) {
-  const start = window.scrollY;
-  const distance = targetY - start;
-  const duration = Math.abs(distance) / speed * 1000; // time in ms
-  let startTime = null;
+  // ====== EMAILJS ======
+  emailjs.init({ publicKey: 'mDVJMMOkpD32dFXnx' });
 
-  function animateScroll(currentTime) {
-    if (!startTime) startTime = currentTime;
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    window.scrollTo(0, start + distance * progress); // linear motion
-    if (progress < 1) requestAnimationFrame(animateScroll);
-  }
+  const form = document.getElementById('contact-form');
+  const statusMessage = document.getElementById('status-message');
 
-  requestAnimationFrame(animateScroll);
-}
-
-// ✅ Get In Touch button scroll (with header offset)
-document.getElementById('getInTouchBtn').addEventListener('click', function (e) {
-  e.preventDefault();
-  const target = document.querySelector('#contact');
-  const headerOffset = 80; // Adjust this value to match your sticky navbar height
-  const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
-  smoothScrollTo(targetPosition);
-});
-
-// ✅ Scroll to Top button
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-// Show/hide button on scroll
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    scrollToTopBtn.classList.remove('hidden');
-  } else {
-    scrollToTopBtn.classList.add('hidden');
-  }
-});
-
-// Click to scroll up
-scrollToTopBtn.addEventListener('click', () => {
-  smoothScrollTo(0); // Scroll back to top at same speed
-});
-
-// Initially hide the button
-scrollToTopBtn.classList.add('hidden');
-
-// ✅ Navbar links scroll smoothly (with same offset)
-document.querySelectorAll('header nav a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    const headerOffset = 80; // Adjust for sticky header
-    const targetY = target.offsetTop - headerOffset;
-    smoothScrollTo(targetY);
-  });
-});
-</script>
-
-<!-- ✅ EmailJS setup (unchanged) -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function() {
-    emailjs.init({ publicKey: "mDVJMMOkpD32dFXnx" });
-  })();
-
-  window.onload = function() {
-    const form = document.getElementById('contact-form');
-    const statusMessage = document.getElementById('status-message');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-
+  if (form && statusMessage) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
       statusMessage.className = 'mt-4 font-semibold text-sm text-gray-500';
       statusMessage.textContent = 'Sending message...';
 
-      emailjs.sendForm('service_fr70vu6', 'template_0eqz8fj', this)
-        .then(function() {
+      emailjs.sendForm('service_fr70vu6', 'template_0eqz8fj', form)
+        .then(() => {
           statusMessage.className = 'mt-4 font-semibold text-sm text-green-600';
-          statusMessage.textContent = 'Message sent successfully! We will be in touch soon.';
+          statusMessage.textContent = 'Message sent successfully!';
           form.reset();
-        }, function(error) {
+          setTimeout(() => statusMessage.textContent = '', 4000);
+        })
+        .catch(() => {
           statusMessage.className = 'mt-4 font-semibold text-sm text-red-600';
-          statusMessage.textContent = 'FAILED to send message. Please check your console.';
-          console.error('EmailJS Error:', error);
+          statusMessage.textContent = 'Failed to send message. Please try again.';
         });
     });
   }
